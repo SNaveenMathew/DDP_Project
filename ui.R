@@ -1,12 +1,8 @@
 library(shiny)
-
 # Define UI for application that plots standard normal density function and reports probability
-
 shinyUI(pageWithSidebar(
-  
   # Application title
   headerPanel("Standard Normal Density"),
-  
   # Sidebar with a slider input for 
   sidebarPanel(
     p("This shiny app computes probability for a standard normal distribution."),
@@ -19,14 +15,12 @@ shinyUI(pageWithSidebar(
                 value = 0,
                 step = 0.01),
     h3('Please choose lower tail or upper tail'),
-   
     selectInput("lo",
                 " ", 
                 choices = c("lower", "upper"),
                 selected = "lower"
                 )
     ),
-        
   # show a normal distribution with score indicated as a red vertical line
   mainPanel(
     plotOutput("distPlot"),
